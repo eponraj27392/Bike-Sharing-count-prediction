@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Bike sharing count prediction</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='image13.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'> Washington D.C USA -  </span><span class="heading_second"> Bike Sharing Usage Prediction</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask </p>
+    		</div>
+    	</div>
+    	
+    	
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- IPL Banner - 1 -->
+            <div class='Bike-share-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+                    
+                         <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='a.jpg') }}" alt="Loh">
+                        </div>
+                        
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='c.jpg') }}" alt="Logo">
+                        </div>
+                        
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='b.jpg') }}" alt="sample">
+                        </div>
+                        
+
+                    </div>
+                </div>
+
+            </div>
+            
+            <!-- Result -->
+    		<div class="results">
+                <p class='result-p'>The forecated bike share usage count is : {{ predicted_usage_cnt }} </p>
+            </div>
+             
+        </div>
+          
+          
+           	  
+    
+         
+         
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/eponraj27392"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/esakki-ponraj-e-159476111/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Ponraj.</p>
+       </div>
+ 
+
+    </body>
+</html>

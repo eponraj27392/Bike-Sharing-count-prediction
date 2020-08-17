@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Bike sharing count prediction</title>
+        <link rel="shortcut icon" href="{{ url_for('static', filename='image13.ico') }}">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+        <script src="https://kit.fontawesome.com/5f3f547070.js" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <!-- Website Title -->
+    	<div class="container">
+            <h2 class='container-heading'><span class='heading_first'> Washington D.C USA -  </span><span class="heading_second"> Bike Sharing Usage Prediction</span></h2>
+            <div class='description'>
+    			<p>A Machine Learning Web App, Built with Flask </p>
+    		</div>
+    	</div>
+
+        <!-- Prediction Area -->
+        <div class="prediction-area">
+
+            <!-- IPL Banner - 1 -->
+            <div class='Bike-share-banner-left'>
+
+                <div class="slider-frame">
+                    <div class="slide-images-up">
+
+                        <!-- Image-1 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='a.jpg') }}" alt="Logo">
+                        </div>
+                        
+                        <!-- Image-2 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='c.jpg') }}" alt="Logo">
+                        </div>
+                        
+                        <!-- Image-3 -->
+                        <div class="image-container">
+                            <img class="image-width" src="{{ url_for('static', filename='b.jpg') }}" alt="sample">
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Prediction Form -->
+            <div class='div2'>
+                <form action="{{ url_for('predict') }}" method="POST">
+                    <!-- Season Dropdown -->
+                    <select class="form-input align-center" name="Which Season ?">
+                        <option value="none">--- Select the season ---</option>
+                        <option value="Spring">Spring</option>
+                        <option value="Summer">Summer</option>
+                        <option value="Fall">Fall</option>
+                        <option value="Winter">Winter</option>
+                    
+                    </select><br>
+                    <!-- Year Dropdown -->
+                    <select class="form-input align-center" name="Which Year ?">
+                        <option value="none">--- Select the Year ---</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+
+                    </select><br>
+                    <!-- Month Dropdown -->
+                    <select class="form-input align-center" name="Which Month ?">
+                        <option value="none">--- Select the Month ---</option>
+                        <option value="January">January</option>
+                        <option value="February">February</option>
+                        <option value="March">March</option>
+                        <option value="April">April</option>
+                        <option value="May">May</option>
+                        <option value="June">June</option>
+                        <option value="July">July</option>
+                        <option value="August">August</option> 
+                        <option value="September">September</option>
+                        <option value="October">October</option>
+                        <option value="November">November</option>
+                        <option value="December">December</option>
+                        
+                    </select><br>
+                    <!-- Holiday Dropdown -->
+                    <select class="form-input align-center" name="Holiday or Not ?">
+                        <option value="none">--- Select it is a Holiday ---</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    
+                    </select><br>
+                    <!-- Weekday Dropdown -->
+                    <select class="form-input align-center" name="Which day ?">
+                        <option value="none">--- Select the day ---</option>
+                        <option value="Sunday">Sunday</option>
+                        <option value="Monday">Monday</option>
+                        <option value="Tuesday">Tuesday</option>
+                        <option value="Wednesday">Wednesday</option>
+                        <option value="Thursday">Thursday</option>
+                        <option value="Friday">Friday</option>
+                        <option value="Saturday">Saturday</option>
+                    
+                    </select><br>
+                    <!-- Working day Dropdown -->
+                    <select class="form-input align-center" name="Working day or Not ?">
+                        <option value="none">--- Select it is a Working day ---</option>
+                        <option value="Yes">Yes</option>
+                        <option value="No">No</option>
+                    
+                    </select><br>
+                    <!-- Weather sit Dropdown -->
+                    <select class="form-input align-center" name="Which Weather condition ?">
+                        <option value="none">--- Select the weather condition ---</option>
+                        <option value="Clear & Cloudy">Clear & Cloudy</option>
+                        <option value="Mist & Few clouds">Mist & Few clouds</option>
+                        <option value="Rain & Thundderstorm">Rain & Thunderstorm</option>
+                        <option value="Heavy Rain & Thunderstorm">Heavy Rain & Thunderstorm</option>
+                   
+                   
+                    </select><br>
+                    <input class="form-input" type="text" name="atemp" placeholder="Select a temperature between -20 to 50 degree"><br>
+                    <input class="form-input" type="text" name="hum" placeholder="Select a humidity between 0 to 100 "><br>
+                    <input class="form-input" type="text" name="windspeed" placeholder="Select a windspeed value between 0 to 67 km/hr"><br>
+                  
+
+			<input type="submit" class="myButton" value="Predict Score">
+        	</form>
+            </div>
+        </div>
+
+
+
+
+        <!-- Footer -->
+       <div class='footer'>
+           <div class="contact">
+               <a target="_blank" href="https://github.com/eponraj27392"><i class="fab fa-github fa-lg contact-icon"></i></a>
+               <a target="_blank" href="https://www.linkedin.com/in/esakki-ponraj-e-159476111/"><i class="fab fa-linkedin fa-lg contact-icon"></i></a>
+           </div>
+           <p class='footer-description'>Made with ❤️ by Ponraj.</p>
+       </div>
+
+    </body>
+</html>
